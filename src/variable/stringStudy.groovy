@@ -54,6 +54,11 @@ println str1[2]
 // 子字符串, 都是闭区间，下面会打印abe三个字母
 println str2[0..2]
 
+// groovy中特有的数据结构——范围。相当于 for(i = 0; i <= 9; i++)
+for (i in 0..9) {
+    println i
+}
+
 
 
 
