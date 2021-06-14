@@ -14,3 +14,7 @@ println x.class   // class java.lang.Integer
 
 def y = 3.14
 println y.class   // class java.math.BigDecimal
+
+// 重新对变量x赋值string, 变量的类型就动态变成了java.lang.String
+x = "abcdefg"
+println x.class   // class java.lang.String
