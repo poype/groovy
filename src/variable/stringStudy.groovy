@@ -1,5 +1,7 @@
 package variable
 
+import org.codehaus.groovy.runtime.StringGroovyMethods
+
 // 单引号定义的String与java中双引号定义的String完全一样
 def name = 'test string'
 println name.class      // class java.lang.String
@@ -30,3 +32,31 @@ void echo(String message) {
 echo(expression)
 echo(sayHello)
 echo(description)
+
+/* ==================字符串的方法和操作符================== */
+/*
+Groovy中字符串方法的来源：
+1. java.lang.String
+2. DefaultGroovyMethods   Groovy对所有对象的扩展
+3. StringGroovyMethods    重写了很多DefaultGroovyMethods中的方法, 又可以分为普通参数类型和闭包参数类型
+*/
+
+// 字符串可以直接比较
+def str1 = "abc"
+def str2 = "abe"
+println str1 > str2
+
+// 打印单个字符
+println str1[0]
+println str1[1]
+println str1[2]
+
+// 子字符串, 都是闭区间，下面会打印abe三个字母
+println str2[0..2]
+
+
+
+
+
+
+
