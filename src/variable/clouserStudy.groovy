@@ -38,3 +38,34 @@ def returnClouser = {
 result = returnClouser()
 println result
 
+//---------------------------------------------------------------
+
+def fab(int num) {
+    int result = 1
+    // 闭包参数放在括号内
+    1.upto(num, {
+        result *= it
+    })
+    return result
+}
+println(fab(5))
+
+def fab2(int number) {
+    int result = 1
+    // 闭包参数放在括号内和放在括号外的效果是一样的
+    number.downto(1) {
+        result *= it
+    }
+    return result
+}
+println fab2(5)
+
+def cal(int count) {
+    int result = 0
+    // 将闭包参数放在方法外，是groovy最常用的写法
+    count.times {int num ->
+        result += num
+    }
+    return result
+}
+println cal(10)
