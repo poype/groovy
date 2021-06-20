@@ -69,3 +69,21 @@ def cal(int count) {
     return result
 }
 println cal(10)
+
+
+
+def s = 'the 2 and 3 is 5'
+s.each { String elem ->
+    println elem
+}
+
+println '-------------------------------'
+result = s.find {
+    return it.isNumber()
+}
+println result
+
+result = s.findAll {
+    return it.isNumber()
+}
+println result
