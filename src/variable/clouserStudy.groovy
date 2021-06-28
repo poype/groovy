@@ -87,3 +87,12 @@ result = s.findAll {
     return it.isNumber()
 }
 println result
+
+println "------------------------------"
+
+// 下面闭包的返回值是123
+def returnTest = {
+    123
+}
+
+println returnTest() // 1
