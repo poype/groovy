@@ -1,0 +1,8 @@
+groovy运行时机制：
+当调用一个类的方法时，按如下顺序寻找要被调用的方法：
+1. 如果类中有此方法，调用该方法，否则跳转2
+2. MetaClass中是否有此方法，如果有则调用，否则跳转3
+3. 是否重写了methodMissing方法，如果有则调用methodMissing方法，否则跳转4
+4. 是否重写了invokeMethod方法，如果有则调用invokeMethod方法，否则throw MissingMethodException
+
+metaClass可以支持对类动态添加属性或方法
